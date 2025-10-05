@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Popusoi | Data Analyst</title>
+    <meta name="description" content="Alexander Popusoi is a Data Analyst and MIS Master's student at the University of Arizona, specializing in Python, SQL, and machine learning.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="Alexander Popusoi | Data Analyst">
+    <meta property="og:description" content="Data Analyst specializing in Python, SQL, and machine learning. MIS Master's student at University of Arizona.">
+    <meta property="og:image" content="https://yourwebsite.com/images/headshot.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Alexander Popusoi",
+      "jobTitle": "Data Analyst",
+      "url": "https://yourwebsite.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/alexander-popusoi",
+        "https://github.com/yourusername"
+      ],
+      "email": "alexanderpopusoi@gmail.com",
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "University of Arizona, Eller College of Management"
+      }
+    }
+    </script>
+    
+    <style>
+        /* CSS Reset & Base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --primary: #0A1F35;
+            --accent: #2B7FD6;
+            --text: #E8E8E8;
+            --text-dim: #A0A0A0;
+            --bg: #000000;
+            --card-bg: #0F1419;
+            --border: #1C2530;
+        }
+        
+        @media (prefers-color-scheme: light) {
+            :root {
+                --primary: #0F3D5E;
+                --accent: #2B7FD6;
+                --text: #1A1A1A;
+                --text-dim: #666666;
+                --bg: #FFFFFF;
+                --card-bg: #F5F7FA;
+                --border: #E0E4E8;
+            }
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        h1, h2, h3 {
+            font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", "Courier New", monospace;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        .headshot-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--accent);
+            background: var(--card-bg);
+        }
+        
+        .headshot-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+        
+        .role {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .tagline {
+            font-size: 1rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Sections */
+        section {
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        
+        /* About */
+        .about-content {
+            max-width: 700px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+        
+        .project-card:focus-within {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: var(--primary);
+        }
+        
+        .project-content {
+            padding: 24px;
+        }
+        
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+        
+        .project-description {
+            color: var(--text-dim);
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .tag {
+            background: var(--primary);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-family: "SF Mono", monospace;
+        }
+        
+        .project-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+        
+        .project-link:hover {
+            opacity: 0.7;
+        }
+        
+        .project-link:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        /* Contact */
+        .contact-links {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        
+        .contact-link:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .contact-link:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 0 40px;
+            }
+            
+            section {
+                padding: 40px 0;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header class="container">
+            <div class="headshot-container">
+                <img src="images/headshot.jpg" alt="Alexander Popusoi headshot" width="150" height="150">
+            </div>
+            <h1>Alexander Popusoi</h1>
+            <div class="role">Data Analyst</div>
+            <p class="tagline">MIS Master's student at the University of Arizona, Eller College of Management. Transforming data into strategic insights using Python, SQL, and machine learning.</p>
+        </header>
+        
+        <section id="about" class="container">
+            <h2>About</h2>
+            <div class="about-content">
+                <p>I'm a Master's candidate in Management Information Systems graduating May 2026, specializing in data analysis, machine learning, and business intelligence. My approach combines technical rigor with strategic thinking—whether processing large datasets under time pressure, building predictive models, or creating interactive dashboards that drive business decisions.</p>
+                <p>I thrive on solving ambiguous problems and delivering actionable insights that create measurable impact.</p>
+            </div>
+        </section>
+        
+        <section id="projects" class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1: Airbnb Analytics -->
+                <article class="project-card">
+                    <img src="images/airbnb-project.jpg" alt="Airbnb data visualization showing sentiment analysis" class="project-image" loading="lazy" width="400" height="200">
+                    <div class="project-content">
+                        <h3 class="project-title">Airbnb Investment Analysis</h3>
+                        <p class="project-description">Completed time-pressured analysis of 2,433 reviews using NLP sentiment analysis and geospatial visualization to deliver strategic investment recommendations. Earned faculty recognition for analytical rigor.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">VADER</span>
+                            <span class="tag">Folium</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/alexander-popusoi/details/projects/" class="project-link" aria-label="View Airbnb project details">View Project →</a>
+                    </div>
+                </article>
+                
+                <!-- Project 2: Retail Analysis -->
+                <article class="project-card">
+                    <img src="images/retail-project.jpg" alt="Customer segmentation clustering visualization" class="project-image" loading="lazy" width="400" height="200">
+                    <div class="project-content">
+                        <h3 class="project-title">Retail Sales & Profitability Analysis</h3>
+                        <p class="project-description">Analyzed 51,291 transactions using K-Prototypes clustering to segment customers by region and profitability, uncovering international growth opportunities and delivering prioritization recommendations.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Clustering</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Visualization</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/alexander-popusoi/details/projects/" class="project-link" aria-label="View retail analysis project">View Project →</a>
+                    </div>
+                </article>
+                
+                <!-- Project 3: Football Analysis -->
+                <article class="project-card">
+                    <img src="images/football-project.jpg" alt="Tableau dashboard showing attendance analysis" class="project-image" loading="lazy" width="400" height="200">
+                    <div class="project-content">
+                        <h3 class="project-title">College Football Attendance Analysis</h3>
+                        <p class="project-description">Built predictive model analyzing 6,373 games with 16 variables, achieving strong model fit (adj. R² = 0.59). Created interactive Tableau dashboards identifying key attendance drivers for stakeholder decisions.</p>
+                        <div class="project-tags">
+                            <span class="tag">Regression</span>
+                            <span class="tag">Tableau</span>
+                            <span class="tag">Statistics</span>
+                            <span class="tag">Excel</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/alexander-popusoi/details/projects/" class="project-link" aria-label="View football analysis project">View Project →</a>
+                    </div>
+                </article>
+                
+                <!-- Project 4: AI Internship -->
+                <article class="project-card">
+                    <img src="images/ai-core-project.jpg" alt="AI-powered cybersecurity platform interface" class="project-image" loading="lazy" width="400" height="200">
+                    <div class="project-content">
+                        <h3 class="project-title">AI-Powered Cybersecurity Platform</h3>
+                        <p class="project-description">Developed AI assistant by deploying OpenAI LLM with RAG architecture. Coordinated cross-functional team to deliver stakeholder-approved cybersecurity education platform with budget and implementation plans.</p>
+                        <div class="project-tags">
+                            <span class="tag">LLM</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">OpenAI</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/alexander-popusoi/" class="project-link" aria-label="View AI Core project">View Project →</a>
+                    </div>
+                </article>
+                
+            </div>
+        </section>
+        
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <div class="contact-links">
+                <a href="mailto:alexanderpopusoi@gmail.com" class="contact-link" aria-label="Email Alexander Popusoi">
+                    <span>Email</span>
+                </a>
+                <a href="https://www.linkedin.com/in/alexander-popusoi" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="View Alexander's LinkedIn profile">
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/alexanderpopusoi" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="View Alexander's GitHub profile">
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="container">
+        <p>&copy; 2025 Alexander Popusoi. Built with focus and precision. !Concept Mockup!</p>
+    </footer>
+</body>
+</html>
